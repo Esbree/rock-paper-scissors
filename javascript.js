@@ -1,6 +1,9 @@
+// user / computer score to keep track of points
 let userScore = 0;
 let computerScore = 0;
 
+
+// picking a random item (computer)
 function getComputerChoice () {
     const words = ['rock', 'paper', 'scissors'];
     let r = Math.floor(Math.random() * 3); // random number between from 0 to 2
@@ -8,6 +11,7 @@ function getComputerChoice () {
 }
 
 
+// comparing user and computer choice and output who won
 function playRound(playerSelection, computerSelection) {
     let result = '';
 
@@ -41,8 +45,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
+// play 5 rounds of the game; output scores
 function game() {
-    // play 5 rounds
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('Choose your weapon!: ').toLowerCase();
         const computerSelection = getComputerChoice();
